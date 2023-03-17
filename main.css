@@ -281,6 +281,61 @@
   }
 }
 
+@media screen and (min-width: 800px) {
+  .stepbystep-section h2 {
+    text-align: center;
+  }
+  .stepbystep-section .steps-container {
+    max-width: 85%;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+  .stepbystep-section .steps-container button {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .restos-section .restos-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .restos-section .restos-container .resto-card {
+    flex: 1 1 400px;
+    max-width: 50%;
+  }
+  .restos-section .restos-container .resto-card .resto-img {
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+@media screen and (min-width: 1130px) {
+  .stepbystep-section .steps-container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: none;
+  }
+  .stepbystep-section .steps-container button {
+    max-width: none;
+    flex: 1 1 320px;
+  }
+  .restos-section .restos-container .resto-card {
+    flex: 1 1 500px;
+    width: 50%;
+    max-width: 50%;
+    height: 20rem;
+  }
+  .restos-section .restos-container .resto-card .resto-img {
+    height: 15rem;
+  }
+}
+@media screen and (min-width: 1432px) {
+  .restos-section {
+    padding: 3rem 1rem 4rem 1rem;
+  }
+}
 footer {
   background-color: #353535;
   padding: 2rem 1rem;
@@ -313,6 +368,7 @@ body {
   color: #000;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
+  max-width: 1440px;
 }
 
 h2 {
