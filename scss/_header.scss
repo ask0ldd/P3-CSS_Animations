@@ -12,6 +12,14 @@
         box-shadow: 0px 2px 4px 0px #cecece;
         background-color: #fff;
         z-index: 2;
+
+    }
+
+    .company-name{
+        font-family: 'Shrikhand', cursive;
+        @include center();
+        font-size: 30px;
+        width: calc(100% - 8rem);
     }
 
     .back-arrow{
@@ -28,13 +36,6 @@
     .row1-rightblock{
         width: 4rem;
         height:100%;
-    }
-
-    .company-name{
-        font-family: 'Shrikhand', cursive;
-        @include center();
-        font-size: 30px;
-        width: calc(100% - 8rem);
     }
 
     &__row2-container{

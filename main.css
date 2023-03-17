@@ -23,6 +23,14 @@
   background-color: #fff;
   z-index: 2;
 }
+.header .company-name {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: calc(100% - 8rem);
+}
 .header .back-arrow {
   width: 4rem;
   height: 100%;
@@ -36,14 +44,6 @@
 .header .row1-rightblock {
   width: 4rem;
   height: 100%;
-}
-.header .company-name {
-  font-family: "Shrikhand", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  width: calc(100% - 8rem);
 }
 .header__row2-container {
   width: 100%;
@@ -63,6 +63,48 @@
     display: none;
   }
 }
+.browse-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+  font-family: "Roboto", sans-serif;
+}
+.browse-section h2 {
+  padding: 2rem 4rem 1rem 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+}
+.browse-section p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 300;
+  padding: 0 2rem;
+  font-size: 20px;
+}
+.browse-section button {
+  padding: 1rem 1.5rem;
+  color: #fff;
+  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
+  border: none;
+  border-radius: 4rem;
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0px 4px 8px 0px #bdadbd;
+  cursor: pointer;
+}
+.browse-section button:hover {
+  background: linear-gradient(350deg, #a173da 0%, #ff8fdf 100%);
+  box-shadow: 0px 4px 8px 0px #afa0af, 0px 1px 2px 0px #a196a1;
+}
+
 footer {
   background-color: #353535;
   padding: 2rem 1rem;
