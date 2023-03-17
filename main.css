@@ -56,6 +56,7 @@
   z-index: 1;
   font-weight: 500;
   font-size: 1rem;
+  color: #353535;
 }
 
 @media screen and (min-width: 376px) {
@@ -95,7 +96,7 @@
   border: none;
   border-radius: 4rem;
   margin-top: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   box-shadow: 0px 4px 8px 0px #bdadbd;
   cursor: pointer;
@@ -103,6 +104,74 @@
 .browse-section button:hover {
   background: linear-gradient(350deg, #a173da 0%, #ff8fdf 100%);
   box-shadow: 0px 4px 8px 0px #afa0af, 0px 1px 2px 0px #a196a1;
+}
+
+.stepbystep-section {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem 0 1rem;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+}
+.stepbystep-section h2 {
+  width: 100%;
+  max-width: 800px;
+}
+.stepbystep-section .steps-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  padding-bottom: 4rem;
+}
+.stepbystep-section .steps-container button {
+  height: 64px;
+  border-radius: 16px;
+  border: none;
+  background-color: #F7F7F7;
+  box-shadow: 0px 4px 8px 0px #d3c9d3;
+  font-weight: 600;
+  font-size: 1rem;
+  width: calc(100% - 1rem);
+  margin-left: auto;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.stepbystep-section .steps-container button:hover {
+  background-color: #F5EDFF;
+  box-shadow: 0px 4px 8px 0px #c4b7c4, 0px 1px 2px 0px #b4a7b4;
+}
+.stepbystep-section .steps-container button:hover svg {
+  fill: #9356DC;
+}
+.stepbystep-section .steps-container button .step-circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: #9356DC;
+  position: absolute;
+  top: 1.25rem;
+  left: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.stepbystep-section .steps-container button .step-circle span {
+  margin-top: 1px;
+}
+.stepbystep-section .steps-container button svg {
+  /*width:2rem;*/
+  margin-left: 2.5rem;
+  margin-right: 1.5rem;
+  fill: #7E7E7E;
 }
 
 footer {
