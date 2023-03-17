@@ -142,9 +142,14 @@
         margin-bottom:0.5rem;
     }
 
-    .resto-card{
+    a{
         width: 100%;
         height:16rem;
+    }
+
+    .resto-card{
+        width: 100%;
+        height:100%;
         display: flex;
         flex-direction: column;
         border-radius: 16px;
@@ -271,9 +276,12 @@
             flex-wrap: wrap;
             column-gap: 1.5rem;
 
-            .resto-card{
+            a{
                 flex:1 1 400px;
                 max-width: 50%;
+            }
+
+            .resto-card{
 
                 .resto-img{
                     object-position: center;
@@ -286,6 +294,8 @@
 
 @media screen and (min-width: 1130px) {
     .stepbystep-section{
+        padding-left: 3rem;
+        padding-right: 3rem;
 
         .steps-container{
             flex-direction: row;
@@ -300,13 +310,19 @@
     }
 
     .restos-section{
+        padding-left: 3rem;
+        padding-right: 3rem;
+
         .restos-container{
 
-            .resto-card{
+            a{
                 flex:1 1 500px;
                 width: 50%;
                 max-width: 50%;
                 height:20rem;
+            }
+
+            .resto-card{
 
                 .resto-img{
                     height:15rem;
@@ -319,6 +335,6 @@
 
 @media screen and (min-width: 1432px) {
     .restos-section{
-        padding:3rem 1rem 4rem 1rem;
+        padding:3rem 3rem 4rem 3rem;
     }
 }

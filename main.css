@@ -8,6 +8,14 @@
   list-style: none;
 }
 
+a:-moz-any-link {
+  color: #000;
+}
+
+a:any-link {
+  color: #000;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -25,6 +33,7 @@
 }
 .header .company-name {
   font-family: "Shrikhand", cursive;
+  font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,9 +206,13 @@
   width: 100%;
   margin-bottom: 0.5rem;
 }
-.restos-section .resto-card {
+.restos-section a {
   width: 100%;
   height: 16rem;
+}
+.restos-section .resto-card {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 16px;
@@ -306,7 +319,7 @@
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
-  .restos-section .restos-container .resto-card {
+  .restos-section .restos-container a {
     flex: 1 1 400px;
     max-width: 50%;
   }
@@ -316,6 +329,10 @@
   }
 }
 @media screen and (min-width: 1130px) {
+  .stepbystep-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   .stepbystep-section .steps-container {
     flex-direction: row;
     justify-content: space-between;
@@ -325,7 +342,11 @@
     max-width: none;
     flex: 1 1 320px;
   }
-  .restos-section .restos-container .resto-card {
+  .restos-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .restos-section .restos-container a {
     flex: 1 1 500px;
     width: 50%;
     max-width: 50%;
@@ -337,7 +358,7 @@
 }
 @media screen and (min-width: 1432px) {
   .restos-section {
-    padding: 3rem 1rem 4rem 1rem;
+    padding: 3rem 3rem 4rem 3rem;
   }
 }
 .menu {
@@ -389,6 +410,14 @@
 .menu h2 {
   font-family: "Shrikhand";
   font-size: 28px;
+  font-weight: 400;
+}
+.menu__categories__grouping {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 .menu h3 {
   font-family: "Roboto", sans-serif;
@@ -466,10 +495,10 @@
 .menu__plat {
   display: flex;
   flex-direction: column;
-  row-gap: 0.5rem;
+  row-gap: 0.4rem;
   min-width: 0; /* for ellipsis to work cause by default flex content can't be smaller than its content */
   flex: 1; /* for ellipsis to work */
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.58rem;
   margin-top: auto;
   margin-left: 0.5rem;
 }
@@ -532,19 +561,34 @@
         }
     }*/
   }
-  .menu__categorie ul {
+  .menu__categories__grouping {
+    display: flex;
     flex-direction: row;
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
-  .menu__categorie li {
-    flex: 1 1 33%;
-    /*padding:1.5rem 0 1rem 0.5rem; 
-    height:fit-content;*/
-  }
   .menu__categories-container {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+  .menu__categories-container h2 {
+    width: 100%;
+  }
+  .menu__categorie ul {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .menu__plat-container {
+    height: 5rem;
+  }
+  .menu__plat-container .menu__plat {
+    margin-left: 1rem;
+  }
+  .menu__plat-container h4 {
+    transform: translateY(-10px);
+  }
+  .menu__plat-container p, .menu__plat-container .menu__prix {
+    transform: translateY(-4px);
   }
   .menu button {
     margin-top: 6rem;
@@ -558,12 +602,21 @@ footer {
   display: flex;
   justify-content: center;
 }
+footer a:-moz-any-link {
+  color: #fff;
+}
+footer a:any-link {
+  color: #fff;
+}
 footer .footer-container {
   flex-grow: 1;
   max-width: 1400px;
 }
 footer h4 {
   margin-bottom: 1.5rem;
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
 }
 footer figure {
   width: 1.75rem;
@@ -577,16 +630,25 @@ footer li {
   display: flex;
 }
 
-@media screen and (min-width: 1400px) {
-  footer {
-    padding: 2rem 0;
-  }
-}
 @media screen and (min-width: 1130px) {
   footer {
     padding: 2rem 3rem;
   }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    justify-content: space-between;
+    /*li{
+        width:25%;
+    }*/
+  }
 }
+/*@media screen and (min-width: 1400px) {
+    footer{
+        padding: 2rem 3rem;
+    }
+}*/
 body {
   padding: 0;
   background-color: #F7F7F7;

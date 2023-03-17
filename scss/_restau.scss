@@ -50,6 +50,14 @@
     h2{
         font-family: 'Shrikhand';
         font-size: 28px;
+        font-weight: 400;
+    }
+
+    &__categories__grouping{
+        display:flex;
+        width: 100%;
+        flex-direction: column;
+        column-gap: 2rem;
     }
 
     h3{
@@ -146,10 +154,10 @@
     &__plat{
         display: flex;
         flex-direction: column;
-        row-gap: 0.5rem;
+        row-gap: 0.4rem;
         min-width: 0; /* for ellipsis to work cause by default flex content can't be smaller than its content */
         flex: 1; /* for ellipsis to work */
-        margin-bottom: 0.55rem;
+        margin-bottom: 0.58rem;
         margin-top: auto;
         margin-left: 0.5rem;
    
@@ -207,24 +215,46 @@
     }*/
 
     .menu{
-        &__categorie{
-            ul{
-                flex-direction: row;
-                column-gap: 1.5rem;
-            }
-
-            li{
-                flex: 1 1 33%;
-                /*padding:1.5rem 0 1rem 0.5rem; 
-                height:fit-content;*/
-            }
+        &__categories__grouping{
+            display:flex;
+            flex-direction: row;
+            column-gap: 1.5rem;
         }
+
 
         &__categories-container{
             padding-left: 3rem;
-            padding-right: 3rem;  
+            padding-right: 3rem;
+
+            h2{
+                width: 100%;
+            }
         }
         
+        &__categorie{
+            ul{
+                flex-direction: column;
+                row-gap: 1.5rem;
+            }
+
+        }
+
+        &__plat-container{
+            height:5rem;
+
+            .menu__plat {
+            margin-left: 1rem;
+            }
+
+            h4{
+                transform: translateY(-10px);
+            }
+
+            p, .menu__prix{
+                transform: translateY(-4px);
+            }
+        }
+
         button{ 
             margin-top: 6rem;
             margin-bottom: 3rem;

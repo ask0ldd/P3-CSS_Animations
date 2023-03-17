@@ -17,6 +17,7 @@
 
     .company-name{
         font-family: 'Shrikhand', cursive;
+        font-weight: 400;
         @include center();
         font-size: 30px;
         width: calc(100% - 8rem);
