@@ -58,6 +58,10 @@
   font-size: 1rem;
   color: #353535;
 }
+.header__row2-container i {
+  margin-right: 0.75rem;
+  color: #353535;
+}
 
 @media screen and (min-width: 376px) {
   .hide {
@@ -126,7 +130,7 @@
   row-gap: 2rem;
   margin-top: 2rem;
   max-width: 800px;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 .stepbystep-section .steps-container button {
   height: 64px;
@@ -417,6 +421,9 @@
   opacity: 0;
   background-color: #fff;
 }
+.menu__plat-container .menu__prix {
+  font-weight: 600;
+}
 .menu .plat-anim {
   animation-name: plat-appearing;
   animation-duration: 1s;
@@ -558,6 +565,9 @@ footer .footer-container {
 footer h4 {
   margin-bottom: 1.5rem;
 }
+footer i {
+  margin-right: 0.5rem;
+}
 footer ul {
   display: flex;
   flex-direction: column;
@@ -567,6 +577,11 @@ footer ul {
 @media screen and (min-width: 1400px) {
   footer {
     padding: 2rem 0;
+  }
+}
+@media screen and (min-width: 1130px) {
+  footer {
+    padding: 2rem 3rem;
   }
 }
 body {
