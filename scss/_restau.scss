@@ -1,0 +1,180 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+
+    &__pic{
+        height:16rem;
+        width: 100%;
+        object-fit: cover;
+        object-position:top;
+        z-index: -1;
+    }
+
+    &__categories-container{
+        background-color: $main-bgcolor;
+        margin-top: -2rem;
+        border-radius: 32px;
+        padding: 2rem 1rem;
+    }
+
+    h2{
+        font-family: 'Shrikhand';
+        font-size: 28px;
+    }
+
+    h3{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        position: relative;
+    }
+
+    h3:after{
+        content:"";
+        position: absolute;
+        left:0;
+        bottom:-8px;
+        height:4px;
+        width:3rem;
+        background-color: $tertiary-color;
+    }
+
+    &__categorie{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.5rem;
+    }
+
+
+
+    &__plat-container{
+        display: flex;
+        /*justify-content: space-between;*/
+        box-shadow: 0px 4px 8px 0px #d3c9d3;
+        height:4rem;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .plat-anim{
+        animation-name: plat-appearing;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .anim-0sdelay{
+        animation-delay: 0s;
+    }
+
+    .anim-150msdelay{
+        animation-delay: 0.15s;
+    }
+
+    .anim-300msdelay{
+        animation-delay: 0.3s;
+    }
+
+    @keyframes plat-appearing {
+        from {
+            transform: translateY(24px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    &__plat-container:hover{
+        
+        & .resize-validate{
+            width: 4rem;
+        }
+
+        & .checked-circle{
+            /*transition: all 0.35s ease-in;*/
+            animation: 0.35s ease-in 0s backwards rotateicon;
+        }
+    }
+
+    ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        background-color: #fff;
+        margin-top: 1.5rem;
+    }
+    
+    &__plat{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        min-width: 0; /* for ellipsis to work cause by default flex content can't be smaller than its content */
+        flex: 1; /* for ellipsis to work */
+        margin-bottom: 0.55rem;
+        margin-top: auto;
+        margin-left: 0.5rem;
+   
+        h4{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            min-width: 0;
+        }
+
+        p{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            min-width: 0;
+        }
+    }
+
+    &__prix{
+        display: flex;
+        margin-left: auto;
+        width: 5rem;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-bottom: 0.55rem;
+        margin-top: auto;
+    }
+
+    &__plat-validate{
+        width: 0;
+        background-color: $tertiary-color;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        overflow: hidden;
+        transition: all 0.2s ease-in;
+    }
+
+    @keyframes rotateicon {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+    }
+}
+
+@media screen and (min-width: 1130px) {
+    .menu__categorie{
+        ul{
+            flex-direction: row;
+            column-gap: 1.5rem;
+        }
+
+        li{
+            flex: 1 1 33%;
+        }
+    }
+}

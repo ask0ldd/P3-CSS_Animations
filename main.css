@@ -336,6 +336,160 @@
     padding: 3rem 1rem 4rem 1rem;
   }
 }
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu__pic {
+  height: 16rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  z-index: -1;
+}
+.menu__categories-container {
+  background-color: #F7F7F7;
+  margin-top: -2rem;
+  border-radius: 32px;
+  padding: 2rem 1rem;
+}
+.menu h2 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+}
+.menu h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  position: relative;
+}
+.menu h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 4px;
+  width: 3rem;
+  background-color: #99E2D0;
+}
+.menu__categorie {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+.menu__plat-container {
+  display: flex;
+  /*justify-content: space-between;*/
+  box-shadow: 0px 4px 8px 0px #d3c9d3;
+  height: 4rem;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+.menu .plat-anim {
+  animation-name: plat-appearing;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.menu .anim-0sdelay {
+  animation-delay: 0s;
+}
+.menu .anim-150msdelay {
+  animation-delay: 0.15s;
+}
+.menu .anim-300msdelay {
+  animation-delay: 0.3s;
+}
+@keyframes plat-appearing {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.menu__plat-container:hover .resize-validate {
+  width: 4rem;
+}
+.menu__plat-container:hover .checked-circle {
+  /*transition: all 0.35s ease-in;*/
+  animation: 0.35s ease-in 0s backwards rotateicon;
+}
+.menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  background-color: #fff;
+  margin-top: 1.5rem;
+}
+.menu__plat {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  min-width: 0; /* for ellipsis to work cause by default flex content can't be smaller than its content */
+  flex: 1; /* for ellipsis to work */
+  margin-bottom: 0.55rem;
+  margin-top: auto;
+  margin-left: 0.5rem;
+}
+.menu__plat h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0;
+}
+.menu__plat p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0;
+}
+.menu__prix {
+  display: flex;
+  margin-left: auto;
+  width: 5rem;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 0.55rem;
+  margin-top: auto;
+}
+.menu__plat-validate {
+  width: 0;
+  background-color: #99E2D0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+}
+@keyframes rotateicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  .menu__categorie ul {
+    flex-direction: row;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .menu__categorie li {
+    flex: 1 1 33%;
+  }
+}
 footer {
   background-color: #353535;
   padding: 2rem 1rem;
