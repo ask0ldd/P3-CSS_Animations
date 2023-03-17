@@ -565,13 +565,16 @@ footer .footer-container {
 footer h4 {
   margin-bottom: 1.5rem;
 }
-footer i {
-  margin-right: 0.5rem;
+footer figure {
+  width: 1.75rem;
 }
 footer ul {
   display: flex;
   flex-direction: column;
   row-gap: 0.75rem;
+}
+footer li {
+  display: flex;
 }
 
 @media screen and (min-width: 1400px) {
