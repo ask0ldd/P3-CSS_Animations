@@ -73,9 +73,9 @@ a:any-link {
 }
 
 @media screen and (min-width: 376px) {
-  .hide {
-    display: none;
-  }
+  /*.hide{
+      display:none;
+  }*/
 }
 .browse-section {
   display: flex;
@@ -298,6 +298,99 @@ a:any-link {
   }
 }
 
+.loader__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 2400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hide-spinner 3s forwards;
+  /*animation-timing-function: ease-out;*/
+}
+.loader__container .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loader__container .lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #9356DC;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  opacity: 0.8;
+}
+.loader__container .lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.loader__container .lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+  background: #FF79DA;
+}
+.loader__container .lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+  background: #99E2D0;
+}
+.loader__container .lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@keyframes hide-spinner {
+  0% {
+    display: flex;
+  }
+  66% {
+    display: flex;
+    opacity: 1;
+    top: 0;
+  }
+  99% {
+    display: flex;
+    opacity: 0;
+    top: 100vh;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
 @media screen and (min-width: 800px) {
   .stepbystep-section h2 {
     text-align: center;
@@ -561,6 +654,10 @@ a:any-link {
         }
     }*/
   }
+  .menu__pic {
+    -o-object-position: center;
+       object-position: center;
+  }
   .menu__categories__grouping {
     display: flex;
     flex-direction: row;
@@ -576,7 +673,8 @@ a:any-link {
   }
   .menu__categorie ul {
     flex-direction: column;
-    row-gap: 1.5rem;
+    row-gap: 2rem;
+    margin-top: 2rem;
   }
   .menu__plat-container {
     height: 5rem;
@@ -591,8 +689,8 @@ a:any-link {
     transform: translateY(-4px);
   }
   .menu button {
-    margin-top: 6rem;
-    margin-bottom: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 }
 footer {

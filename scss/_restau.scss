@@ -215,6 +215,10 @@
     }*/
 
     .menu{
+        &__pic{
+            object-position: center;
+        }
+
         &__categories__grouping{
             display:flex;
             flex-direction: row;
@@ -234,7 +238,8 @@
         &__categorie{
             ul{
                 flex-direction: column;
-                row-gap: 1.5rem;
+                row-gap: 2rem;
+                margin-top: 2rem;
             }
 
         }
@@ -256,8 +261,8 @@
         }
 
         button{ 
-            margin-top: 6rem;
-            margin-bottom: 3rem;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
         }
         /*&__plat{
             row-gap: 1.5rem;
