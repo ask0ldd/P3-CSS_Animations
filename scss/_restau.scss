@@ -236,6 +236,8 @@
         }
         
         &__categorie{
+            flex-shrink: 0;
+            width: calc((100% - 3rem) / 3);
             ul{
                 flex-direction: column;
                 row-gap: 2rem;
