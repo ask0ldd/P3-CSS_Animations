@@ -383,7 +383,7 @@
 
             a{
                 flex:1 1 400px;
-                max-width: 50%;
+                max-width: calc((100% - 1.5rem)/2);
             }
 
             .resto-card{

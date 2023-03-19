@@ -415,7 +415,7 @@ a:any-link {
   }
   .restos-section .restos-container a {
     flex: 1 1 400px;
-    max-width: 50%;
+    max-width: calc((100% - 1.5rem) / 2);
   }
   .restos-section .restos-container .resto-card .resto-img {
     -o-object-position: center;
