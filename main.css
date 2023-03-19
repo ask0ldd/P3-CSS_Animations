@@ -58,7 +58,7 @@ a:any-link {
   width: 100%;
   height: 3rem;
   display: flex;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +105,7 @@ a:any-link {
 .browse-section button {
   padding: 1rem 1.5rem;
   color: #fff;
-  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
   border: none;
   border-radius: 4rem;
   margin-top: 2rem;
@@ -145,7 +145,7 @@ a:any-link {
   height: 64px;
   border-radius: 16px;
   border: none;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   box-shadow: 0px 4px 8px 0px #d3c9d3;
   font-weight: 600;
   font-size: 1rem;
@@ -158,17 +158,17 @@ a:any-link {
   align-items: center;
 }
 .stepbystep-section .steps-container button:hover {
-  background-color: #F5EDFF;
+  background-color: #f5edff;
   box-shadow: 0px 4px 8px 0px #c4b7c4, 0px 1px 2px 0px #b4a7b4;
 }
 .stepbystep-section .steps-container button:hover svg {
-  fill: #9356DC;
+  fill: #9356dc;
 }
 .stepbystep-section .steps-container button .step-circle {
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: #9356DC;
+  background-color: #9356dc;
   position: absolute;
   top: 1.25rem;
   left: -1rem;
@@ -184,7 +184,7 @@ a:any-link {
   /*width:2rem;*/
   margin-left: 2.5rem;
   margin-right: 1.5rem;
-  fill: #7E7E7E;
+  fill: #7e7e7e;
 }
 
 .restos-section {
@@ -227,7 +227,7 @@ a:any-link {
   right: 0.75rem;
   height: 2rem;
   padding: 0 1rem;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #008766;
   border-radius: 3px;
   display: flex;
@@ -239,9 +239,9 @@ a:any-link {
   width: 100%;
   height: 11rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: bottom;
-     object-position: bottom;
+  object-position: bottom;
 }
 .restos-section .resto-card__datasnlike-container {
   display: flex;
@@ -277,6 +277,7 @@ a:any-link {
   left: calc(2rem - 11px);
 }
 .restos-section .resto-card__likecontainer .fullheart {
+  position: absolute;
   opacity: 0;
   top: calc(2.5rem - 12px);
   left: calc(2rem - 12px);
@@ -324,7 +325,7 @@ a:any-link {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #9356DC;
+  background: #9356dc;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
   opacity: 0.8;
 }
@@ -335,12 +336,12 @@ a:any-link {
 .loader__container .lds-ellipsis div:nth-child(2) {
   left: 8px;
   animation: lds-ellipsis2 0.6s infinite;
-  background: #FF79DA;
+  background: #ff79da;
 }
 .loader__container .lds-ellipsis div:nth-child(3) {
   left: 32px;
   animation: lds-ellipsis2 0.6s infinite;
-  background: #99E2D0;
+  background: #99e2d0;
 }
 .loader__container .lds-ellipsis div:nth-child(4) {
   left: 56px;
@@ -398,7 +399,7 @@ a:any-link {
   .stepbystep-section .steps-container {
     max-width: 85%;
     -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    column-gap: 2rem;
     flex-direction: column;
     padding-left: 1rem;
   }
@@ -410,7 +411,7 @@ a:any-link {
     flex-direction: row;
     flex-wrap: wrap;
     -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
+    column-gap: 1.5rem;
   }
   .restos-section .restos-container a {
     flex: 1 1 400px;
@@ -418,7 +419,7 @@ a:any-link {
   }
   .restos-section .restos-container .resto-card .resto-img {
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
   }
 }
 @media screen and (min-width: 1130px) {
@@ -462,13 +463,13 @@ a:any-link {
   height: 16rem;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: top;
-     object-position: top;
+  object-position: top;
   z-index: -1;
 }
 .menu__categories-container {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   margin-top: -2rem;
   border-radius: 32px;
   padding: 2rem 1rem;
@@ -476,14 +477,62 @@ a:any-link {
   align-items: center;
   display: flex;
   flex-direction: column;
+  /*h2{
+     align-self: flex-start;
+  }*/
 }
-.menu__categories-container h2 {
-  align-self: flex-start;
+.menu__categories-container .nameandheart-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu__categories-container .nameandheart-container .likecontainer {
+  height: 100%;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+.menu__categories-container .nameandheart-container .likecontainer img {
+  position: absolute;
+  top: 10px;
+  right: 1.5rem;
+}
+.menu__categories-container .nameandheart-container .likecontainer .fullheart {
+  position: absolute;
+  opacity: 0;
+  top: 9px;
+  right: 23px;
+}
+.menu__categories-container
+  .nameandheart-container
+  .likecontainer
+  .fullheart:hover {
+  animation-name: fullheart-anim;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+.menu__categories-container
+  .nameandheart-container
+  .likecontainer
+  .emptyheart:hover {
+  opacity: 0;
+}
+@keyframes fullheart-anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .menu__categories-container button {
   padding: 1rem 3rem;
   color: #fff;
-  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
   border: none;
   border-radius: 4rem;
   margin-top: 3rem;
@@ -510,7 +559,7 @@ a:any-link {
   width: 100%;
   flex-direction: column;
   -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
 }
 .menu h3 {
   font-family: "Roboto", sans-serif;
@@ -525,7 +574,7 @@ a:any-link {
   bottom: -8px;
   height: 4px;
   width: 3rem;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 .menu__categorie {
   display: flex;
@@ -618,7 +667,7 @@ a:any-link {
 }
 .menu__plat-validate {
   width: 0;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -656,13 +705,13 @@ a:any-link {
   }
   .menu__pic {
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
   }
   .menu__categories__grouping {
     display: flex;
     flex-direction: row;
     -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
+    column-gap: 1.5rem;
   }
   .menu__categories-container {
     padding-left: 3rem;
@@ -689,7 +738,8 @@ a:any-link {
   .menu__plat-container h4 {
     transform: translateY(-10px);
   }
-  .menu__plat-container p, .menu__plat-container .menu__prix {
+  .menu__plat-container p,
+  .menu__plat-container .menu__prix {
     transform: translateY(-4px);
   }
   .menu button {
@@ -753,7 +803,7 @@ footer li {
 }*/
 body {
   padding: 0;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   margin: 0 auto;
   color: #000;
   font-size: 1rem;
@@ -771,4 +821,4 @@ h2 {
     max-width: 1432px;
     margin: 0 auto;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

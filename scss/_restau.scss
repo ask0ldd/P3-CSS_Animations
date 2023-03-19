@@ -20,9 +20,58 @@
         display: flex;
         flex-direction: column;
 
-        h2{
-           align-self: flex-start;
+        .nameandheart-container{
+            width: 100%;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .likecontainer{
+                height: 100%;
+                width:4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                flex-shrink: 0;
+    
+                img{
+                    position: absolute;
+                    top:10px;
+                    right:1.5rem;
+                }
+    
+                .fullheart{
+                    position: absolute;
+                    opacity:0;
+                    top:9px;
+                    right:23px;
+                }
+    
+                .fullheart:hover{
+                    animation-name: fullheart-anim;
+                    animation-duration: 0.75s;
+                    animation-fill-mode: forwards;
+                }
+    
+                .emptyheart:hover{
+                    opacity:0;
+                }
+    
+                @keyframes fullheart-anim {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+            }
         }
+
+        /*h2{
+           align-self: flex-start;
+        }*/
 
         button{
             padding:1rem 3rem;
