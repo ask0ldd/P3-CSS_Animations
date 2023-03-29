@@ -8,9 +8,7 @@
     h2{
         padding:2rem 4rem 1rem 4rem;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center();
         text-align: center;
         font-weight: 700;
     }
@@ -67,7 +65,7 @@
         max-width: 800px;
         padding-bottom: 3rem;
 
-        button{
+        [role="button"]{
             height:64px;
             border-radius: 16px;
             border: none;
@@ -216,6 +214,7 @@
             .fullheart{
                 position: absolute;
                 opacity:0;
+                height:24px;
                 top:calc(5rem/2 - 12px);
                 left:calc(4rem/2 - 12px);
             }
@@ -226,10 +225,10 @@
                 animation-fill-mode: forwards;
             }
 
-            /*.emptyheart{
-                opacity:1;
+            .emptyheart{
+                height:22px;
             }
-
+            /*
             .emptyheart:hover{
                 opacity:0;
             }*/
@@ -365,7 +364,7 @@
             flex-direction: column;
             padding-left: 1rem;
 
-            button{
+            [role="button"]{
                 max-width: 340px;
                 margin:0 auto;
             }
@@ -404,7 +403,7 @@
             justify-content: space-between;
             max-width: none;
 
-            button{
+            [role="button"]{
                 max-width: none;
                 flex: 1 1 320px;
             }

@@ -46,6 +46,11 @@
                     opacity:0;
                     top:9px;
                     right:23px;
+                    height:24px;
+                }
+    
+                .emptyheart{
+                    height:22px;
                 }
     
                 .fullheart:hover{
@@ -53,6 +58,7 @@
                     animation-duration: 0.75s;
                     animation-fill-mode: forwards;
                 }
+
     
                 @keyframes fullheart-anim {
                     from {
