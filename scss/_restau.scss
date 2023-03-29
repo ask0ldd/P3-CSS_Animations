@@ -54,10 +54,6 @@
                     animation-fill-mode: forwards;
                 }
     
-                .emptyheart:hover{
-                    opacity:0;
-                }
-    
                 @keyframes fullheart-anim {
                     from {
                         opacity: 0;
@@ -68,10 +64,6 @@
                 }
             }
         }
-
-        /*h2{
-           align-self: flex-start;
-        }*/
 
         button{
             padding:1rem 3rem;
@@ -186,7 +178,6 @@
         }
 
         & .checked-circle{
-            /*transition: all 0.35s ease-in;*/
             animation: 0.35s ease-in 0s backwards rotateicon;
         }
     }
@@ -258,10 +249,6 @@
 }
 
 @media screen and (min-width: 1130px) {
-    /*.menu{
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-    }*/
 
     .menu{
         &__pic{
@@ -316,17 +303,6 @@
             margin-top: 4rem;
             margin-bottom: 2rem;
         }
-        /*&__plat{
-            row-gap: 1.5rem;
-
-            h4{
-                font-size: 20px;
-            }
-
-            p{
-                font-size: 18px;
-            }
-        }*/
     }   
 }
 

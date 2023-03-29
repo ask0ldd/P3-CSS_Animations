@@ -16,13 +16,12 @@
     }
 
     p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center();
         text-align: center;
         font-weight: 300;
         padding:0 2rem;
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 8px;
     }
 
     button{
@@ -101,9 +100,7 @@
                 position: absolute;
                 top:1.25rem;
                 left:-1rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include center();
                 color: #fff;
 
                 span{
@@ -206,9 +203,7 @@
         &__likecontainer{
             height: 100%;
             width:4rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include center();
             position: relative;
             flex-shrink: 0;
 
@@ -231,9 +226,13 @@
                 animation-fill-mode: forwards;
             }
 
+            /*.emptyheart{
+                opacity:1;
+            }
+
             .emptyheart:hover{
                 opacity:0;
-            }
+            }*/
 
             @keyframes fullheart-anim {
                 from {
@@ -259,9 +258,7 @@
     height:100vh;
     background-color: #fff;
     z-index: 2400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center();
     animation: hide-spinner 3s forwards;
     /*animation-timing-function: ease-out;*/
 

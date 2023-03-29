@@ -100,7 +100,8 @@ a:any-link {
   text-align: center;
   font-weight: 300;
   padding: 0 2rem;
-  font-size: 20px;
+  font-size: 18px;
+  margin-top: 8px;
 }
 .browse-section button {
   padding: 1rem 1.5rem;
@@ -270,6 +271,13 @@ a:any-link {
   align-items: center;
   position: relative;
   flex-shrink: 0;
+  /*.emptyheart{
+      opacity:1;
+  }
+
+  .emptyheart:hover{
+      opacity:0;
+  }*/
 }
 .restos-section .resto-card__likecontainer img {
   position: absolute;
@@ -286,9 +294,6 @@ a:any-link {
   animation-name: fullheart-anim;
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
-}
-.restos-section .resto-card__likecontainer .emptyheart:hover {
-  opacity: 0;
 }
 @keyframes fullheart-anim {
   from {
@@ -477,9 +482,6 @@ a:any-link {
   align-items: center;
   display: flex;
   flex-direction: column;
-  /*h2{
-     align-self: flex-start;
-  }*/
 }
 .menu__categories-container .nameandheart-container {
   width: 100%;
@@ -511,9 +513,6 @@ a:any-link {
   animation-name: fullheart-anim;
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
-}
-.menu__categories-container .nameandheart-container .likecontainer .emptyheart:hover {
-  opacity: 0;
 }
 @keyframes fullheart-anim {
   from {
@@ -617,7 +616,6 @@ a:any-link {
   width: 4rem;
 }
 .menu__plat-container:hover .checked-circle {
-  /*transition: all 0.35s ease-in;*/
   animation: 0.35s ease-in 0s backwards rotateicon;
 }
 .menu ul {
@@ -680,23 +678,6 @@ a:any-link {
 }
 
 @media screen and (min-width: 1130px) {
-  /*.menu{
-      margin-top: 1rem;
-      margin-bottom: 3rem;
-  }*/
-  .menu {
-    /*&__plat{
-        row-gap: 1.5rem;
-
-        h4{
-            font-size: 20px;
-        }
-
-        p{
-            font-size: 18px;
-        }
-    }*/
-  }
   .menu__pic {
     -o-object-position: center;
        object-position: center;
