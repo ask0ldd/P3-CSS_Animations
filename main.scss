@@ -1,4 +1,4 @@
-@import './scss/variables', './scss/mixins', './scss/resets', './scss/header', './scss/home', './scss/restau', './scss/footer';
+@import './scss/abstracts/variables', './scss/abstracts/mixins', './scss/base/resets', './scss/layout/header', './scss/pages/home', './scss/pages/restau', './scss/layout/footer';
 
 body {
     padding: 0;
