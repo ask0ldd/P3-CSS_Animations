@@ -271,37 +271,47 @@ a:any-link {
   align-items: center;
   position: relative;
   flex-shrink: 0;
-  /*
-  .emptyheart:hover{
-      opacity:0;
-  }*/
 }
-.restos-section .resto-card__likecontainer img {
+.restos-section .resto-card__likecontainer img, .restos-section .resto-card__likecontainer .heart-icon {
+  width: 24px;
   position: absolute;
   top: calc(2.5rem - 11px);
   left: calc(2rem - 11px);
 }
-.restos-section .resto-card__likecontainer .fullheart {
-  position: absolute;
-  opacity: 0;
-  height: 24px;
-  top: calc(2.5rem - 12px);
-  left: calc(2rem - 12px);
+.restos-section .resto-card__likecontainer .empty-heart {
+  fill: #000;
+  opacity: 1;
 }
-.restos-section .resto-card__likecontainer .fullheart:hover {
-  animation-name: fullheart-anim;
+.restos-section .resto-card__likecontainer .full-heart {
+  fill: url(#Gradient1);
+  opacity: 0;
+}
+.restos-section .resto-card__likecontainer .heart-icon:hover .full-heart {
+  animation-name: fullheart-appears;
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
 }
-.restos-section .resto-card__likecontainer .emptyheart {
-  height: 22px;
+.restos-section .resto-card__likecontainer .heart-icon:hover .empty-heart {
+  animation-name: emptyheart-disappears;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
 }
-@keyframes fullheart-anim {
+@keyframes fullheart-appears {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes emptyheart-disappears {
+  from {
+    opacity: 1;
+    fill: #000;
+  }
+  to {
+    opacity: 0;
+    fill: blue;
   }
 }
 
@@ -499,32 +509,46 @@ a:any-link {
   position: relative;
   flex-shrink: 0;
 }
-.menu__categories-container .nameandheart-container .likecontainer img {
+.menu__categories-container .nameandheart-container .likecontainer img, .menu__categories-container .nameandheart-container .likecontainer .heart-icon {
+  width: 24px;
   position: absolute;
-  top: 10px;
+  top: 8px;
   right: 1.5rem;
 }
-.menu__categories-container .nameandheart-container .likecontainer .fullheart {
-  position: absolute;
+.menu__categories-container .nameandheart-container .likecontainer .empty-heart {
+  fill: #000;
+  opacity: 1;
+}
+.menu__categories-container .nameandheart-container .likecontainer .full-heart {
+  fill: url(#Gradient1);
   opacity: 0;
-  top: 9px;
-  right: 23px;
-  height: 24px;
 }
-.menu__categories-container .nameandheart-container .likecontainer .emptyheart {
-  height: 22px;
-}
-.menu__categories-container .nameandheart-container .likecontainer .fullheart:hover {
-  animation-name: fullheart-anim;
+.menu__categories-container .nameandheart-container .likecontainer .heart-icon:hover .full-heart {
+  animation-name: fullheart-appears;
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
 }
-@keyframes fullheart-anim {
+.menu__categories-container .nameandheart-container .likecontainer .heart-icon:hover .empty-heart {
+  animation-name: emptyheart-disappears;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+@keyframes fullheart-appears {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes emptyheart-disappears {
+  from {
+    opacity: 1;
+    fill: #000;
+  }
+  to {
+    opacity: 0;
+    fill: blue;
   }
 }
 .menu__categories-container button {

@@ -205,47 +205,55 @@
             position: relative;
             flex-shrink: 0;
 
-            img{
+            img, .heart-icon{
+                width:24px;
                 position: absolute;
                 top:calc(5rem/2 - 11px);
                 left:calc(4rem/2 - 11px);
             }
-
-            .fullheart{
-                position: absolute;
-                opacity:0;
-                height:24px;
-                top:calc(5rem/2 - 12px);
-                left:calc(4rem/2 - 12px);
+    
+            .empty-heart{
+                fill:#000;
+                opacity:1;
             }
-
-            .fullheart:hover{
-                animation-name: fullheart-anim;
+    
+            .full-heart{
+                fill:url(#Gradient1);
+                opacity:0;
+            }
+    
+            .heart-icon:hover .full-heart{
+                animation-name: fullheart-appears;
                 animation-duration: 0.75s;
                 animation-fill-mode: forwards;
             }
-
-            .emptyheart{
-                height:22px;
+    
+            .heart-icon:hover .empty-heart{
+                animation-name: emptyheart-disappears;
+                animation-duration: 0.75s;
+                animation-fill-mode: forwards;
             }
-            /*
-            .emptyheart:hover{
-                opacity:0;
-            }*/
-
-            @keyframes fullheart-anim {
+    
+            @keyframes fullheart-appears {
                 from {
-                    opacity: 0;
+                    opacity:0;
                 }
                 to {
-                    opacity: 1;
+                    opacity:1;
                 }
             }
-
-
+    
+            @keyframes emptyheart-disappears {
+                from {
+                    opacity:1;
+                    fill:#000;
+                }
+                to {
+                    opacity:0;
+                    fill:blue;
+                }
+            }
         }
-
-
     }
 }
 
