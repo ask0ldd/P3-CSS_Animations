@@ -179,6 +179,10 @@
         animation-delay: 0.3s;
     }
 
+    .anim-450msdelay{
+        animation-delay: 0.45s;
+    }
+
     @keyframes plat-appearing {
         from {
             transform: translateY(24px);

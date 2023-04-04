@@ -72,11 +72,6 @@ a:any-link {
   color: #353535;
 }
 
-@media screen and (min-width: 376px) {
-  /*.hide{
-      display:none;
-  }*/
-}
 .browse-section {
   display: flex;
   flex-direction: column;
@@ -182,7 +177,6 @@ a:any-link {
   margin-top: 1px;
 }
 .stepbystep-section .steps-container [role=button] svg {
-  /*width:2rem;*/
   margin-left: 2.5rem;
   margin-right: 1.5rem;
   fill: #7E7E7E;
@@ -311,7 +305,6 @@ a:any-link {
   }
   to {
     opacity: 0;
-    /*fill:blue;*/
   }
 }
 
@@ -630,6 +623,9 @@ a:any-link {
 .menu .anim-300msdelay {
   animation-delay: 0.3s;
 }
+.menu .anim-450msdelay {
+  animation-delay: 0.45s;
+}
 @keyframes plat-appearing {
   from {
     transform: translateY(24px);
@@ -800,16 +796,8 @@ footer li {
     flex-direction: row;
     margin-top: 2rem;
     justify-content: space-between;
-    /*li{
-        width:25%;
-    }*/
   }
 }
-/*@media screen and (min-width: 1400px) {
-    footer{
-        padding: 2rem 3rem;
-    }
-}*/
 body {
   padding: 0;
   background-color: #F7F7F7;
@@ -827,12 +815,4 @@ h2 {
 main {
   display: flex;
   flex-direction: column;
-}
-
-/*@media screen and (min-width: 700px) {
-    main {
-        padding: 0 30px;
-        max-width: 1432px;
-        margin: 0 auto;
-    }
-}*//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
