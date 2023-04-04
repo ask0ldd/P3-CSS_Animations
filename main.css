@@ -311,7 +311,7 @@ a:any-link {
   }
   to {
     opacity: 0;
-    fill: blue;
+    /*fill:blue;*/
   }
 }
 
@@ -327,15 +327,14 @@ a:any-link {
   justify-content: center;
   align-items: center;
   animation: hide-spinner 3s forwards;
-  /*animation-timing-function: ease-out;*/
 }
-.loader__container .lds-ellipsis {
+.loader__container .circles__container {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
-.loader__container .lds-ellipsis div {
+.loader__container .circles__container div {
   position: absolute;
   top: 33px;
   width: 13px;
@@ -345,25 +344,25 @@ a:any-link {
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
   opacity: 0.8;
 }
-.loader__container .lds-ellipsis div:nth-child(1) {
+.loader__container .circles__container div:nth-child(1) {
   left: 8px;
-  animation: lds-ellipsis1 0.6s infinite;
+  animation: circles1 0.6s infinite;
 }
-.loader__container .lds-ellipsis div:nth-child(2) {
+.loader__container .circles__container div:nth-child(2) {
   left: 8px;
-  animation: lds-ellipsis2 0.6s infinite;
+  animation: circles2 0.6s infinite;
   background: #FF79DA;
 }
-.loader__container .lds-ellipsis div:nth-child(3) {
+.loader__container .circles__container div:nth-child(3) {
   left: 32px;
-  animation: lds-ellipsis2 0.6s infinite;
+  animation: circles2 0.6s infinite;
   background: #99E2D0;
 }
-.loader__container .lds-ellipsis div:nth-child(4) {
+.loader__container .circles__container div:nth-child(4) {
   left: 56px;
-  animation: lds-ellipsis3 0.6s infinite;
+  animation: circles3 0.6s infinite;
 }
-@keyframes lds-ellipsis1 {
+@keyframes circles1 {
   0% {
     transform: scale(0);
   }
@@ -371,7 +370,7 @@ a:any-link {
     transform: scale(1);
   }
 }
-@keyframes lds-ellipsis3 {
+@keyframes circles3 {
   0% {
     transform: scale(1);
   }
@@ -379,7 +378,7 @@ a:any-link {
     transform: scale(0);
   }
 }
-@keyframes lds-ellipsis2 {
+@keyframes circles2 {
   0% {
     transform: translate(0, 0);
   }
