@@ -642,6 +642,25 @@ a:any-link {
 .menu__plat-container:hover .checked-circle {
   animation: 0.35s ease-in 0s backwards rotateicon;
 }
+@keyframes rotateicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu__plat-validate {
+  width: 0;
+  background-color: #99E2D0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+}
 .menu ul {
   padding: 0;
   margin: 0;
@@ -680,25 +699,6 @@ a:any-link {
   flex-shrink: 0;
   margin-bottom: 0.55rem;
   margin-top: auto;
-}
-.menu__plat-validate {
-  width: 0;
-  background-color: #99E2D0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  overflow: hidden;
-  transition: all 0.2s ease-in;
-}
-@keyframes rotateicon {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @media screen and (min-width: 1130px) {
